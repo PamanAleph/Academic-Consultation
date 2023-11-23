@@ -60,11 +60,18 @@
 
 <!--    education-->
     <EditText
-        android:id="@+id/editTextBirthRegister"
+        android:id="@+id/editTextEducationRegister"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Last Education Name"
         android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/editTextPhoneNumberRegister"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Phone Number"
+        android:inputType="number"/>
 
     <!--    Email-->
     <EditText
@@ -103,7 +110,6 @@
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
         android:textSize="18dp"
         android:backgroundTint="#FA7070"
         android:text="Register"/>

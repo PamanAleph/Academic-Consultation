@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 public class RegisterPage extends AppCompatActivity {
 
-    private EditText editTextNote;
-    private Button buttonSaveNote;
+    private EditText NameRegister, EducationRegister, NumberRegister, EmailRegister, PasswordRegister ;
+    private Button ButtonRegister;
 
     private NotesDataSource notesDataSource;
 
@@ -22,34 +22,44 @@ public class RegisterPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
 
-//        editTextNote = findViewById(R.id.editTextNote);
-//        buttonSaveNote = findViewById(R.id.buttonSaveNote);
+        NameRegister = findViewById(R.id.editTextNameRegister);
+        EducationRegister = findViewById(R.id.editTextEducationRegister);
+        NumberRegister = findViewById(R.id.editTextPhoneNumberRegister);
+        EmailRegister = findViewById(R.id.editTextEmailRegister);
+        PasswordRegister = findViewById(R.id.editTextPasswordRegister);
+
+        ButtonRegister = findViewById(R.id.buttonRegister);
 
         notesDataSource = new NotesDataSource(this);
         notesDataSource.open();
 
-        buttonSaveNote.setOnClickListener(new View.OnClickListener() {
+        ButtonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveNote();
+                saveData();
             }
         });
     }
 
-    private void saveNote() {
-        String noteText = editTextNote.getText().toString();
+    private void saveData() {
+        String name = NameRegister.getText().toString();
+        String education = EducationRegister.getText().toString();
+        int number = Integer.parseInt(NumberRegister.getText().toString());
+        String email = EmailRegister.getText().toString();
+        String password = PasswordRegister.getText().toString();
 
-        if (!noteText.isEmpty()) {
-            long result = notesDataSource.createNote(noteText);
+        if (!name.isEmpty() && !education.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+            // Assuming createNote() takes these parameters and saves them to your database
+            long result = notesDataSource.createNote(name, education, number, email, password);
 
             if (result != -1) {
-                Toast.makeText(this, "Note saved successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                 // Optionally, you can finish the activity or navigate to another screen here
             } else {
-                Toast.makeText(this, "Failed to save note", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Failed To Save Data", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(this, "Please enter a note", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Fill All the Data", Toast.LENGTH_SHORT).show();
         }
     }
 

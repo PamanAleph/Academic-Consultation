@@ -13,14 +13,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_page);
+        setContentView(R.layout.activity_main);
         buttonRegister = findViewById(R.id.buttonRegister);
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Register = new Intent(getApplicationContext(), RegisterPage.class);
-                startActivities(new Intent[]{Register});
+                Intent intent = new Intent(MainActivity.this, RegisterPage.class);
+                startActivity(intent);
             }
         });
     }
