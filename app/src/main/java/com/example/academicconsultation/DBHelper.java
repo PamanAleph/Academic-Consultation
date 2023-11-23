@@ -12,7 +12,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "your_database_name";
     private static final int DATABASE_VERSION = 1;
 
-    private static final String TABLE_NAME = "your_table_name";
+    private static final String TABLE_NAME = "Student";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NAME = "name";
     // add more columns as needed
