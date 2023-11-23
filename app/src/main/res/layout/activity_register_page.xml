@@ -49,10 +49,42 @@
         android:textStyle="italic"/>
 
 
+    <!--    Name-->
+    <EditText
+        android:id="@+id/editTextNameRegister"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Full Name"
+        android:inputType="text"/>
+
+<!--    education-->
+    <EditText
+        android:id="@+id/editTextBirthRegister"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Last Education Name"
+        android:inputType="text"/>
+
+    <Spinner
+        android:id="@+id/spinnerMajor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:spinnerMode="dropdown"
+        android:hint="Select Major"
+        android:entries="@array/major_options"/>
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:spinnerMode="dropdown"
+        android:hint="Select Gender"
+        android:entries="@array/gender_options"/>
+
     <!--    Email-->
     <EditText
-        android:id="@+id/editTextUsername"
-        android:layout_marginTop="12dp"
+        android:id="@+id/editTextEmailRegister"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Email"
@@ -60,25 +92,11 @@
 
     <!--    Password-->
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextPasswordRegister"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Password"
         android:inputType="textPassword"/>
-
-    <Spinner
-        android:id="@+id/spinnerGender"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:spinnerMode="dropdown"
-        android:hint="Select Gender"
-        android:entries="@array/gender_options"/>
-
-
 
     <!--Register-->
     <Button
