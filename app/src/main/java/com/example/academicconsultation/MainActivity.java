@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent OpenActOne = new Intent(getApplicationContext(), RegisterPage.class);
-                startActivities(new Intent[]{OpenActOne});
+                Intent Register = new Intent(getApplicationContext(), RegisterPage.class);
+                startActivities(new Intent[]{Register});
             }
         });
     }
