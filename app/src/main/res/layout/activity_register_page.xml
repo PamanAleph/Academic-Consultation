@@ -1,21 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".RegisterPage">
 
-    <EditText
-        android:id="@+id/editTextNote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your note"/>
+    <!--    image-->
+    <ImageView
+        android:id="@+id/presuniv_logo"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/president_university"/>
 
-    <Button
-        android:id="@+id/buttonSaveNote"
+    <!--    Text-->
+    <TextView
+        android:id="@+id/welcomeTextRegister1"
+        android:layout_marginTop="19dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextNote"
-        android:layout_marginTop="16dp"
-        android:text="Save"/>
-</RelativeLayout>
+        android:text="Register"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/welcomeTextRegister2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="President University Academic Consultation"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="18dp"/>
+
+    <TextView
+        android:id="@+id/welcomeRegister3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Where Tomorrow's Leaders Come Together"
+        android:textSize="18dp"
+        android:textStyle="italic"/>
+
+
+    <!--    Email-->
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+
+    <!--    Password-->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:spinnerMode="dropdown"
+        android:hint="Select Gender"
+        android:entries="@array/gender_options"/>
+
+
+
+    <!--Register-->
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:backgroundTint="#FA7070"
+        android:text="Register"/>
+
+</LinearLayout>

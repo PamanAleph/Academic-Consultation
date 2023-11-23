@@ -22,8 +22,8 @@ public class RegisterPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
 
-        editTextNote = findViewById(R.id.editTextNote);
-        buttonSaveNote = findViewById(R.id.buttonSaveNote);
+//        editTextNote = findViewById(R.id.editTextNote);
+//        buttonSaveNote = findViewById(R.id.buttonSaveNote);
 
         notesDataSource = new NotesDataSource(this);
         notesDataSource.open();
