@@ -5,11 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "notes_database";
+    private static final String DATABASE_NAME = "AcademicConsultation";
     private static final int DATABASE_VERSION = 1;
 
     // Table name and column names
-    public static final String TABLE_NOTES = "notes";
+    public static final String TABLE_NOTES = "student";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NOTE = "note";
 
