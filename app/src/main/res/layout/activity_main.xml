@@ -8,6 +8,7 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+<!--    image-->
     <ImageView
         android:id="@+id/presuniv_logo"
         android:layout_gravity="center"
@@ -15,13 +16,49 @@
         android:layout_height="100dp"
         android:src="@drawable/president_university"/>
 
+<!--    Text-->
+    <TextView
+        android:id="@+id/welcomeText1"
+        android:layout_marginTop="19dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/welcomeText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="President University Academic Consultation"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="18dp"/>
+
+    <TextView
+        android:id="@+id/welcomeText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Where Tomorrow's Leaders Come Together"
+        android:textSize="18dp"
+        android:textStyle="italic"/>
+
+
+    <!--    Email-->
     <EditText
         android:id="@+id/editTextUsername"
+        android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="text"/>
 
+<!--    Password-->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
@@ -29,22 +66,32 @@
         android:hint="Password"
         android:inputType="textPassword"/>
 
+<!--    Login-->
     <Button
         android:id="@+id/buttonLogin"
+        android:layout_marginVertical="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:backgroundTint="#83A2FF"
         android:text="Login"
         />
-
+<!--Register-->
     <TextView
+        android:id="@+id/registerText"
+        android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="If you don't have an account, then register."/>
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:text="If you don't have an account, then register"/>
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:backgroundTint="#FA7070"
         android:text="Register"/>
 
 </LinearLayout>
