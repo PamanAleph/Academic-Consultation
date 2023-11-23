@@ -9,9 +9,11 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@color/black"/>
+        android:id="@+id/presuniv_logo"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/president_university"/>
 
     <EditText
         android:id="@+id/editTextUsername"
