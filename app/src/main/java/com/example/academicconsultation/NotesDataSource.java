@@ -24,16 +24,16 @@ public class NotesDataSource {
     }
 
     // Create a new note
-    public long createNote(String note, String education, int number, String email, String password) {
+    public long createNote(String note) {
         ContentValues values = new ContentValues();
         values.put(DatabaseHelper.COLUMN_NOTE, note);
-        return database.insert(DatabaseHelper.TABLE_NOTES, null, values);
+        return database.insert(DatabaseHelper.TABLE_REGISTER, null, values);
     }
 
     // Read all notes
     public Cursor getAllNotes() {
         String[] allColumns = {DatabaseHelper.COLUMN_ID, DatabaseHelper.COLUMN_NOTE};
-        return database.query(DatabaseHelper.TABLE_NOTES, allColumns,
+        return database.query(DatabaseHelper.TABLE_REGISTER, allColumns,
                 null, null, null, null, null);
     }
 
@@ -41,14 +41,13 @@ public class NotesDataSource {
     public int updateNote(long id, String newNote) {
         ContentValues values = new ContentValues();
         values.put(DatabaseHelper.COLUMN_NOTE, newNote);
-        return database.update(DatabaseHelper.TABLE_NOTES, values,
+        return database.update(DatabaseHelper.TABLE_REGISTER, values,
                 DatabaseHelper.COLUMN_ID + " = " + id, null);
     }
 
     // Delete a note
     public int deleteNote(long id) {
-        return database.delete(DatabaseHelper.TABLE_NOTES,
+        return database.delete(DatabaseHelper.TABLE_REGISTER,
                 DatabaseHelper.COLUMN_ID + " = " + id, null);
     }
 }
-
