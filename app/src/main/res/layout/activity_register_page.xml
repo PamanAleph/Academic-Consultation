@@ -66,13 +66,6 @@
         android:hint="Last Education Name"
         android:inputType="text"/>
 
-    <EditText
-        android:id="@+id/editTextPhoneNumberRegister"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Phone Number"
-        android:inputType="number"/>
-
     <!--    Email-->
     <EditText
         android:id="@+id/editTextEmailRegister"

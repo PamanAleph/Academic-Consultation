@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class RegisterPage extends AppCompatActivity {
 
-    private EditText NameRegister, EducationRegister, NumberRegister, EmailRegister, PasswordRegister ;
+    private EditText NameRegister, EducationRegister, EmailRegister, PasswordRegister ;
     private Button ButtonRegister;
 
     private NotesDataSource notesDataSource;
@@ -24,7 +24,6 @@ public class RegisterPage extends AppCompatActivity {
 
         NameRegister = findViewById(R.id.editTextNameRegister);
         EducationRegister = findViewById(R.id.editTextEducationRegister);
-        NumberRegister = findViewById(R.id.editTextPhoneNumberRegister);
         EmailRegister = findViewById(R.id.editTextEmailRegister);
         PasswordRegister = findViewById(R.id.editTextPasswordRegister);
 
@@ -44,13 +43,12 @@ public class RegisterPage extends AppCompatActivity {
     private void saveData() {
         String name = NameRegister.getText().toString();
         String education = EducationRegister.getText().toString();
-        int number = Integer.parseInt(NumberRegister.getText().toString());
         String email = EmailRegister.getText().toString();
         String password = PasswordRegister.getText().toString();
 
         if (!name.isEmpty() && !education.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
             // Assuming createNote() takes these parameters and saves them to your database
-            long result = notesDataSource.createNote(name, education, number, email, password);
+            long result = notesDataSource.createNote(name, education, email, password);
 
             if (result != -1) {
                 Toast.makeText(this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();

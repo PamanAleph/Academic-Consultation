@@ -24,9 +24,12 @@ public class NotesDataSource {
     }
 
     // Create a new note
-    public long createNote(String note) {
+    public long createNote(String name, String education, String email, String password) {
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_ID, note);
+        values.put(DatabaseHelper.COLUMN_NAME, name);
+        values.put(DatabaseHelper.COLUMN_EDUCATION, education);
+        values.put(DatabaseHelper.COLUMN_EMAIL, email);
+        values.put(DatabaseHelper.COLUMN_PASSWORD, password);
         return database.insert(DatabaseHelper.TABLE_REGISTER, null, values);
     }
 
