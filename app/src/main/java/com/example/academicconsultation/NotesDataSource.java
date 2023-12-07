@@ -26,13 +26,13 @@ public class NotesDataSource {
     // Create a new note
     public long createNote(String note) {
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_NOTE, note);
+        values.put(DatabaseHelper.COLUMN_ID, note);
         return database.insert(DatabaseHelper.TABLE_REGISTER, null, values);
     }
 
     // Read all notes
     public Cursor getAllNotes() {
-        String[] allColumns = {DatabaseHelper.COLUMN_ID, DatabaseHelper.COLUMN_NOTE};
+        String[] allColumns = {DatabaseHelper.COLUMN_NAME, DatabaseHelper.COLUMN_NAME};
         return database.query(DatabaseHelper.TABLE_REGISTER, allColumns,
                 null, null, null, null, null);
     }
@@ -40,7 +40,7 @@ public class NotesDataSource {
     // Update a note
     public int updateNote(long id, String newNote) {
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_NOTE, newNote);
+        values.put(DatabaseHelper.COLUMN_EMAIL, newNote);
         return database.update(DatabaseHelper.TABLE_REGISTER, values,
                 DatabaseHelper.COLUMN_ID + " = " + id, null);
     }
