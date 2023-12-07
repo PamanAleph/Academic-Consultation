@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AcademicConsultation</string>
+    <string name="app_name">Academic Consultation</string>
 
     <string-array name="gender_options">
         <item>Male</item>
@@ -10,4 +10,8 @@
         <item>Informatics</item>
         <item>Information System</item>
     </string-array>
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="logout_message">Logout!</string>
 </resources>
